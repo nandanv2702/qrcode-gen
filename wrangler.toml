@@ -1,0 +1,6 @@
+name = "qrcode-gen"
+type = "webpack"
+account_id = "451010d395d6f27237fb11ec6caaf1ed"
+workers_dev = true
+route = ""
+zone_id = ""
