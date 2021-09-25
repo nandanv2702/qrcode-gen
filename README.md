@@ -1,15 +1,18 @@
-# 👷 `worker-template` Hello World
+# Serverless QR Code Generator
 
-A template for kick starting a Cloudflare worker project.
+Uses [Cloudflare Workers](https://developers.cloudflare.com/workers/) to generate QR code from text sent as a POST request
 
-[`index.js`](https://github.com/cloudflare/worker-template/blob/master/index.js) is the content of the Workers script.
+## How to Use
 
-#### Wrangler
+Send a POST request to https://qrcode-gen.nandan.workers.dev with a body 
 
-To generate using [wrangler](https://github.com/cloudflare/wrangler)
-
+```js
+{
+  'text': TEXT_TO_CONVERT_TO_QR_CODE
+}
 ```
-wrangler generate projectname https://github.com/cloudflare/worker-template
+
+```console
+user@computer:~$ curl -X POST -d '{"text": "this is a fucking secret; istg do not tell anyone else"}' https://qrcode-gen.nandan.workers.dev > result.png
 ```
 
-Further documentation for Wrangler can be found [here](https://developers.cloudflare.com/workers/tooling/wrangler).
