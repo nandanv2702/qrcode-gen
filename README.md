@@ -4,15 +4,16 @@ Uses [Cloudflare Workers](https://developers.cloudflare.com/workers/) to generat
 
 ## How to Use
 
-Send a POST request to https://qrcode-gen.nandan.workers.dev with a body 
+Send a POST request to https://qrcode-gen.nandan.workers.dev with a body as follows
 
 ```js
 {
   'text': TEXT_TO_CONVERT_TO_QR_CODE
 }
 ```
+Easier way to do it is by using cURL
 
 ```console
-user@computer:~$ curl -X POST -d '{"text": "this is a fucking secret; istg do not tell anyone else"}' https://qrcode-gen.nandan.workers.dev > result.png
+curl -X POST -d '{"text": TEXT_TO_CONVERT_TO_QR_CODE}' https://qrcode-gen.nandan.workers.dev > result.png
 ```
 
